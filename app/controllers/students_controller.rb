@@ -1,4 +1,7 @@
 class StudentsController < ApplicationController
+  before_action :set_student, only: :show
+  before_action :student_params, only: :create
+  
   
   def index
     @students = Student.all
